@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.listaTarefas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    margin-top: 3rem;
+    height: 70vh;
+    width: 20rem;
+    background-color: #9e9e9e;
+    padding-top: 1rem;
+}
+
+.tarefas{
+    background-color: #ffe4c4;
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.tarefa{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.novaTarefa{
+    background-color: bisque;
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
