@@ -1,6 +1,38 @@
+@font-face {
+    font-family: 'Sniglet-Regular';
+    src: url('/Sniglet-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rowdies-Light';
+    src: url('/Rowdies-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --fonte-texto: "Sniglet-Regular";
+    --fonte-titulo: "Rowdies-Light";
+
+    --cor-textoEscuro: #F5EFFF;
+    --cor-primeriaEscuro: #A594F9;
+    --cor-secundariaEscuro: #E5D9F2;
+    
+    --cor-textoClaro: black;
+    --cor-primeriaClaro: #E5D9F2;
+    --cor-secundariaClaro: #A594F9;
+}
+
 *{
     padding: 0;
     margin: 0;
+    font-family: var(--fonte-texto);
+}
+
+h1{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-textoClaro);
 }
 
 .container{
@@ -9,6 +41,16 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    background-color: var(--cor-primeriaClaro);
+}
+
+.container.tema-escuro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-primeriaEscuro);
 }
 
 .listaTarefas{
@@ -23,26 +65,35 @@
 }
 
 .tarefas{
-    background-color: #ffe4c4;
     width: 90%;
-    height: 2.5rem;
+    height: auto;
     display: flex;
-    justify-content: left;
-    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
 }
 
 .tarefa{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-between;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: var(--cor-secundariaClaro);
+    margin-top: 1rem;
+}
+
+.edicao{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
 }
 
 .novaTarefa{
-    background-color: bisque;
+    background-color: var(--cor-secundariaClaro);
     width: 90%;
     height: 2.5rem;
     display: flex;
@@ -51,4 +102,17 @@
     border-radius: 5px;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+#nomeTarefa{
+    height: 1.3rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: black solid 0.125rem;
+    outline: none;
+    padding-left: 0.5rem;
+}
+
+#nome{
+    font-family: var(--fonte-texto);
 }
