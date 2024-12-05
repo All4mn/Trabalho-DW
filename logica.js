@@ -31,4 +31,3 @@ function criarTarefa(){
     }
 }
 buttonAdd.onclick = criarTarefa
-//deu certo nn, mas é um começo
