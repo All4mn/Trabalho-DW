@@ -101,7 +101,6 @@ h1{
     align-items: center;
     border-radius: 5px;
     margin-top: 1rem;
-    cursor: pointer;
 }
 
 #nomeTarefa{
@@ -115,4 +114,13 @@ h1{
 
 #nome{
     font-family: var(--fonte-texto);
+}
+
+svg{
+    cursor: pointer;
+}
+
+#mudar-tema{
+    height: 1rem;
+    width: 3rem;
 }
