@@ -104,6 +104,20 @@ h1{
     margin-top: 1rem;
 }
 
+.lixo{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.lixo:hover{
+    border-radius: 100%;
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+.editar{
+    cursor: pointer;
+}
+
 #nomeTarefa{
     height: 1.3rem;
     border-radius: 5px;
