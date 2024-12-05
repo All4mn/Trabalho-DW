@@ -1,7 +1,5 @@
 let inputTarefa = document.getElementById("nomeTarefa")
 let buttonAdd = document.getElementById("adicionar")
-let buttonDel = document.querySelectorAll(".lixo")
-let buttonEdit = document.querySelectorAll(".editar")
 let checkbox = document.getElementById("conclusao")
 let listaTarefas = document.querySelector(".tarefas")
 
@@ -27,22 +25,30 @@ function listTarefa(lista){
         listaTarefas.appendChild(novaTarefa);
     });
 
+    let buttonDel = document.querySelectorAll(".lixo")
+    buttonDel.forEach((elemento) =>{
+        elemento.addEventListener("click", removerTarefa);
+    });
 }
 
+let buttonEdit = document.querySelectorAll(".editar")
+
+
 function criarTarefa(){
-    if(inputTarefa.value == ''){
+    if(inputTarefa.value === ''){
         alert("Escreva o nome da tarefa")
     }else{
         tarefas.push({ nome: inputTarefa.value, conclusao:false})
+        inputTarefa.value = ""
         console.log(tarefas)
         listTarefa(tarefas)
     }
 }
 
 function removerTarefa(event){
-    const index = parseInt(event.target.id);  // Converte o id de string para número
-    tarefas.splice(index, 1);  // Remove o item do array
-    listTarefa(tarefas);  // Atualiza a lista de tarefas na tela
+    const index = parseInt(event.target.id)
+    tarefas.splice(index, 1)
+    listTarefa(tarefas)
 }
 
 
@@ -51,7 +57,4 @@ function editarTarefa(){
 }
 
 buttonAdd.onclick = criarTarefa
-buttonDel.forEach((elemento) =>{
-    elemento.addEventListener('click', removerTarefa)
-});
 listTarefa(tarefas)
