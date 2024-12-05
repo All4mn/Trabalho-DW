@@ -79,7 +79,8 @@ h1{
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 2rem;
+    height: auto;
+    min-height: 2rem;
     border-radius: 5px;
     background-color: var(--cor-secundariaClaro);
     margin-top: 1rem;
@@ -123,4 +124,5 @@ svg{
 #mudar-tema{
     height: 1rem;
     width: 3rem;
+    display: none;
 }
