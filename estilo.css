@@ -134,7 +134,19 @@ h1{
 
 .salvar:hover{
     /* transform: translateY(-2px); */
-    transform: scale(20);
+    transform: scale(1.1);
+    background-color: rgb(255, 141, 141);
+    animation: cor 0.5s infinite linear;
+}
+
+@keyframes rodar-peao{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+@keyframes cor{
+    0%{filter: hue-rotate(0);}
+    100%{filter: hue-rotate(360deg);}
 }
 
 #nome{

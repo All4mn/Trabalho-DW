@@ -85,4 +85,9 @@ function salvarEdicao(index){
 }
 
 buttonAdd.onclick = criarTarefa
+inputTarefa.addEventListener("keypress", (event)=>{
+    if(event.key === 'Enter'){
+        criarTarefa()
+    }
+})
 listTarefa(tarefas)
