@@ -14,8 +14,7 @@ function listTarefa(lista) {
         let novaTarefa = document.createElement("div");
         novaTarefa.classList.add("tarefa");
 
-        novaTarefa.innerHTML = `
-        <input type="checkbox" id="conclusao${index}">
+        novaTarefa.innerHTML = `<input type="checkbox" id="conclusao${index}">
         <p id="nomeTarefa${index}">${tarefa.nome}</p>
         <input type="text" class="nomeTarefa" id="editTarefa${index}" value="${tarefa.nome}" style="display: none;">
         <button class="salvar" id="salvar${index}" style="display: none;">Salvar</button>
