@@ -113,13 +113,26 @@ h1{
     cursor: pointer;
 }
 
-#nomeTarefa{
+.nomeTarefa{
     height: 1.3rem;
     border-radius: 5px;
     border: none;
     border-bottom: black solid 0.125rem;
     outline: none;
     padding-left: 0.5rem;
+}
+
+.salvar{
+    background-color: white;
+    border: solid 1.3px black;
+    border-radius: 5px;
+    height: 1.2rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.salvar:hover{
+    
 }
 
 #nome{
