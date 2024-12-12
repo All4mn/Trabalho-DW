@@ -27,18 +27,15 @@
 body[data-theme="dark"] > .container {
     background-color:var(--cor-primeriaEscuro);
     color: var(--cor-textoEscuro);
-    
-    
   } 
 
-  body[data-theme="dark"] .tarefa {
-
- background-color: var(--cor-secundariaEscuro);
+body[data-theme="dark"] .tarefa {
+    background-color: var(--cor-secundariaEscuro);
  }
 
- body[data-theme="dark"] .listaTarefas {
-columns: var(--cor-textoEscuro);
- }
+body[data-theme="dark"] .listaTarefas {
+    columns: var(--cor-textoEscuro);
+}
 
  body[data-theme="dark"] h1{
     color: var(--cor-textoEscuro);

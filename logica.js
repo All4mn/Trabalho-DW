@@ -4,10 +4,11 @@ let checkbox = document.getElementById("conclusao")
 let listaTarefas = document.querySelector(".tarefas")
 
 let tarefas = [
-    {nome: "Tarefa 1", conclusao: false},
-    {nome: "Tarefa 2", conclusao: false},
+    {nome: "Tarefa genérica 1", conclusao: false},
+    {nome: "Tarefa genérica 2", conclusao: false},
 ]
 
+// função para gerar a lista
 function listTarefa(lista) {
     listaTarefas.innerHTML = ``;
     lista.forEach((tarefa, index) => {
@@ -25,6 +26,7 @@ function listTarefa(lista) {
 
         listaTarefas.appendChild(novaTarefa);
 
+        //adiciona um evento de clique e retorna o id do svg
         let buttonDel = document.querySelector(`#lixo${index}`);
         buttonDel.addEventListener("click", () => removerTarefa(index));
 
@@ -33,12 +35,20 @@ function listTarefa(lista) {
 
         let buttonSave = document.querySelector(`#salvar${index}`);
         buttonSave.addEventListener("click", () => salvarEdicao(index));
+
+        let inputTarefaEdit = document.getElementById(`editTarefa${index}`)
+        inputTarefaEdit.addEventListener("keydown", (event)=>{
+            if(event.key ==='Enter'){
+                salvarEdicao(index)
+            }
+        })
     });
 }
 
 
-
+//função para adicionar uma tarefa
 function criarTarefa(){
+    //verifica se o input tá vazio
     if(inputTarefa.value === ''){
         alert("Escreva o nome da tarefa")
     }else{
@@ -49,11 +59,13 @@ function criarTarefa(){
     }
 }
 
+//função para remover uma tarefa
 function removerTarefa(index){
     tarefas.splice(index, 1)
     listTarefa(tarefas)
 }
 
+//função para editar uma tarefa
 function editarTarefa(index){
     let nomeTarefa = document.getElementById(`nomeTarefa${index}`)
     let inputTarefaEdit = document.getElementById(`editTarefa${index}`)
@@ -92,6 +104,7 @@ inputTarefa.addEventListener("keypress", (event)=>{
 })
 listTarefa(tarefas)
 
+// função para mudar o tema
 const themeToggleButton = document.getElementById('mudar-tema');
 
 themeToggleButton.addEventListener('click', () => {
