@@ -17,7 +17,7 @@
 
     --cor-textoEscuro: #F5EFFF;
     --cor-primeriaEscuro: #31285e;
-    --cor-secundariaEscuro: #110936;
+    --cor-secundariaEscuro: #A594F9;
     
     --cor-textoClaro: black;
     --cor-primeriaClaro: #E5D9F2;
@@ -40,6 +40,10 @@ body[data-theme="dark"] > .container {
 columns: var(--cor-textoEscuro);
  }
 
+ body[data-theme="dark"] h1{
+    color: var(--cor-textoEscuro);
+ }
+
 *{
     padding: 0;
     margin: 0;
@@ -49,6 +53,7 @@ columns: var(--cor-textoEscuro);
 h1{
     font-family: var(--fonte-titulo);
     color: var(--cor-textoClaro);
+    transition: 0.5s;
 }
 
 .container{
@@ -58,6 +63,7 @@ h1{
     width: 100vw;
     height: 100vh;
     background-color: var(--cor-primeriaClaro);
+    transition: 0.5s;
 }
 
 .listaTarefas{
@@ -113,7 +119,6 @@ h1{
 
 .lixo{
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .editar{
@@ -140,20 +145,7 @@ h1{
 }
 
 .salvar:hover{
-    /* transform: translateY(-2px); */
     transform: scale(1.1);
-    background-color: rgb(255, 141, 141);
-    animation: cor 0.5s infinite linear;
-}
-
-@keyframes rodar-peao{
-    0%{transform: rotate(0deg)}
-    100%{transform: rotate(360deg)}
-}
-
-@keyframes cor{
-    0%{filter: hue-rotate(0);}
-    100%{filter: hue-rotate(360deg);}
 }
 
 #nome{
