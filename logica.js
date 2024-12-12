@@ -91,3 +91,17 @@ inputTarefa.addEventListener("keypress", (event)=>{
     }
 })
 listTarefa(tarefas)
+
+const themeToggleButton = document.getElementById('mudar-tema');
+
+themeToggleButton.addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-theme');
+  
+    if (currentTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light'); 
+    } else {
+      document.body.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark'); 
+    }
+});

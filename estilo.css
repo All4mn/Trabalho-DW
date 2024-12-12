@@ -16,13 +16,29 @@
     --fonte-titulo: "Rowdies-Light";
 
     --cor-textoEscuro: #F5EFFF;
-    --cor-primeriaEscuro: #A594F9;
-    --cor-secundariaEscuro: #E5D9F2;
+    --cor-primeriaEscuro: #31285e;
+    --cor-secundariaEscuro: #110936;
     
     --cor-textoClaro: black;
     --cor-primeriaClaro: #E5D9F2;
     --cor-secundariaClaro: #A594F9;
 }
+
+body[data-theme="dark"] > .container {
+    background-color:var(--cor-primeriaEscuro);
+    color: var(--cor-textoEscuro);
+    
+    
+  } 
+
+  body[data-theme="dark"] .tarefa {
+
+ background-color: var(--cor-secundariaEscuro);
+ }
+
+ body[data-theme="dark"] .listaTarefas {
+columns: var(--cor-textoEscuro);
+ }
 
 *{
     padding: 0;
@@ -42,15 +58,6 @@ h1{
     width: 100vw;
     height: 100vh;
     background-color: var(--cor-primeriaClaro);
-}
-
-.container.tema-escuro{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--cor-primeriaEscuro);
 }
 
 .listaTarefas{
@@ -158,7 +165,11 @@ svg{
 }
 
 #mudar-tema{
-    height: 1rem;
+    height: 3rem;
     width: 3rem;
-    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    border: solid 1px black;
 }
