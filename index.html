@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="ptbr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" />
     <script type="module" src="logica.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <button id="mudar-tema">Tema</button>
-        <div class="listaTarefas">
-            <h1>Lista de Tarefas</h1>
-                <div class="novaTarefa">
-                    <span>
-                        <label for="nomeTarefa"></label>
-                        <input type="text" id="nomeTarefa" class="nomeTarefa" placeholder="Nome da Tarefa">
-                    </span>
-                        <svg id="adicionar" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                </div> 
-                
-                <div class="tarefas">
-                </div>
-                
-            </div>
-            <div class="progressbar">
-                <div class="fundo"></div>
-                <div class="porcentagem"></div>
-                <p class="numeros">2/10</p>
-            </div>
+      <button id="mudar-tema">Tema</button>
+      <div class="listaTarefas">
+        <h1>Lista de Tarefas</h1>
+        <div class="novaTarefa">
+          <span>
+            <label for="nomeTarefa"></label>
+            <input
+              type="text"
+              id="nomeTarefa"
+              class="nomeTarefa"
+              placeholder="Nome da Tarefa"
+            />
+          </span>
+          <svg
+            id="adicionar"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 5l0 14" />
+            <path d="M5 12l14 0" />
+          </svg>
         </div>
 
-        <!-- <div class="modal">
+        <div class="tarefas"></div>
+      </div>
+      <div class="progressbar">
+        <div id="fundo"></div>
+        <div id="porcentagem"></div>
+        <p id="numeros"></p>
+      </div>
+    </div>
+
+    <!-- <div class="modal">
             <a href="">Allan Guilherme</a><svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
             viewBox="0 0 308 308" xml:space="preserve">
        <g id="XMLID_468_">
@@ -64,6 +83,5 @@
         </div>
 
     </div> -->
-
-</body>
+  </body>
 </html>
