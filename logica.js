@@ -1,6 +1,5 @@
 let inputTarefa = document.getElementById("nomeTarefa")
 let buttonAdd = document.getElementById("adicionar")
-let checkbox = document.getElementById("conclusao")
 let listaTarefas = document.querySelector(".tarefas")
 
 let tarefas = [
@@ -52,7 +51,7 @@ function criarTarefa(){
     if(inputTarefa.value === ''){
         alert("Escreva o nome da tarefa")
     }else{
-        tarefas.push({ nome: inputTarefa.value, conclusao:false})
+        tarefas.unshift({ nome: inputTarefa.value, conclusao:false})
         inputTarefa.value = ""
         console.log(tarefas)
         listTarefa(tarefas)
@@ -118,3 +117,4 @@ themeToggleButton.addEventListener('click', () => {
       localStorage.setItem('theme', 'dark'); 
     }
 });
+
