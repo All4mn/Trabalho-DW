@@ -4,6 +4,7 @@ let listaTarefas = document.querySelector(".tarefas")
 let numeros = document.getElementById("numeros")
 let porcentagem = document.getElementById("porcentagem")
 let modal = document.getElementById("modal")
+let fechar = document.getElementById("fechar")
 
 function numeroTarefas() {
   const x = tarefas.length;
@@ -125,18 +126,21 @@ inputTarefa.addEventListener("keypress", (event) => {
   }
 });
 
+//comando para abrir o modal
 document.addEventListener("keydown", (event) =>{
   if(event.ctrlKey && event.key == 'h'){
     event.preventDefault()
     if(modal.style.display === "flex"){
-      event.preventDefault()
       modal.style.display = "none"
     }else{
-      event.preventDefault()
       modal.style.display = "flex"
     }
   }
 })
+
+fechar.onclick = function(){
+  modal.style.display = "none"
+}
 listTarefa(tarefas);
 
 // função para mudar o tema
