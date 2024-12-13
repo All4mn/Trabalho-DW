@@ -1,8 +1,9 @@
-let inputTarefa = document.getElementById("nomeTarefa");
-let buttonAdd = document.getElementById("adicionar");
-let listaTarefas = document.querySelector(".tarefas");
-let numeros = document.getElementById("numeros");
-let porcentagem = document.getElementById("porcentagem");
+let inputTarefa = document.getElementById("nomeTarefa")
+let buttonAdd = document.getElementById("adicionar")
+let listaTarefas = document.querySelector(".tarefas")
+let numeros = document.getElementById("numeros")
+let porcentagem = document.getElementById("porcentagem")
+let modal = document.getElementById("modal")
 
 function numeroTarefas() {
   const x = tarefas.length;
@@ -123,6 +124,19 @@ inputTarefa.addEventListener("keypress", (event) => {
     criarTarefa();
   }
 });
+
+document.addEventListener("keydown", (event) =>{
+  if(event.ctrlKey && event.key == 'h'){
+    event.preventDefault()
+    if(modal.style.display === "flex"){
+      event.preventDefault()
+      modal.style.display = "none"
+    }else{
+      event.preventDefault()
+      modal.style.display = "flex"
+    }
+  }
+})
 listTarefa(tarefas);
 
 // função para mudar o tema

@@ -44,7 +44,7 @@ body[data-theme="dark"] .tarefas {
 body[data-theme="dark"] .contato {
   background-color: var(--cor-secundariaEscuro);
 }
-body[data-theme="dark"] .modal {
+body[data-theme="dark"] #modal {
   background-color: var(--cor-3Escuro);
 }
 * {
@@ -218,12 +218,11 @@ svg {
   color: black;
 }
 
-.modal {
+#modal {
   background-color: var(--cor-secundariaClaro);
   position: fixed;
   height: 60%;
   width: 50%;
-  /* display: flex; */
   display: none;
   flex-direction: column;
   align-items: center;
