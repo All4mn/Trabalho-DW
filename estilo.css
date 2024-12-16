@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Sniglet-Regular";
-  src: url("/Sniglet-Regular.ttf");
+  src: url("./Sniglet-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Rowdies-Light";
-  src: url("/Rowdies-Light.ttf");
+  src: url("./Rowdies-Light.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -191,6 +191,11 @@ svg {
   border: solid 2px black;
   background-color: rgba(245, 245, 0, 0.742);
   transition: 0.5s;
+  cursor: pointer;
+}
+
+#mudar-tema:hover{
+  transform: scale(1.1);
 }
 
 #sol{

@@ -80,7 +80,7 @@ function criarTarefa() {
 
 //função para remover uma tarefa
 function removerTarefa(index) {
-  tarefas.splice(index, 1);
+  tarefas.splice(index);
   listTarefa(tarefas);
 }
 
