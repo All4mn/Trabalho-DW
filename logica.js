@@ -1,10 +1,10 @@
-let inputTarefa = document.getElementById("nomeTarefa")
-let buttonAdd = document.getElementById("adicionar")
-let listaTarefas = document.querySelector(".tarefas")
-let numeros = document.getElementById("numeros")
-let porcentagem = document.getElementById("porcentagem")
-let modal = document.getElementById("modal")
-let fechar = document.getElementById("fechar")
+let inputTarefa = document.getElementById("nomeTarefa");
+let buttonAdd = document.getElementById("adicionar");
+let listaTarefas = document.querySelector(".tarefas");
+let numeros = document.getElementById("numeros");
+let porcentagem = document.getElementById("porcentagem");
+let modal = document.getElementById("modal");
+let fechar = document.getElementById("fechar");
 
 function numeroTarefas() {
   const x = tarefas.length;
@@ -26,9 +26,13 @@ function listTarefa(lista) {
     let novaTarefa = document.createElement("div");
     novaTarefa.classList.add("tarefa");
 
-    novaTarefa.innerHTML = `<input type="checkbox" id="conclusao${index}" ${tarefa.conclusao ? "checked" : ""}>
+    novaTarefa.innerHTML = `<input type="checkbox" id="conclusao${index}" ${
+      tarefa.conclusao ? "checked" : ""
+    }>
         <p id="nomeTarefa${index}">${tarefa.nome}</p>
-        <input type="text" class="nomeTarefa" id="editTarefa${index}" value="${tarefa.nome}" style="display: none;">
+        <input type="text" class="nomeTarefa" id="editTarefa${index}" value="${
+      tarefa.nome
+    }" style="display: none;">
         <button class="salvar" id="salvar${index}" style="display: none;">Salvar</button>
         <div class="edicao">
             <svg class="lixo" id="lixo${index}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
@@ -82,6 +86,7 @@ function criarTarefa() {
 function removerTarefa(index) {
   tarefas.splice(index);
   listTarefa(tarefas);
+  console.log(tarefas);
 }
 
 //função para editar uma tarefa
@@ -123,20 +128,20 @@ inputTarefa.addEventListener("keypress", (event) => {
 });
 
 //comando para abrir o modal
-document.addEventListener("keydown", (event) =>{
-  if(event.ctrlKey && event.key == 'h'){
-    event.preventDefault()
-    if(modal.style.display === "flex"){
-      modal.style.display = "none"
-    }else{
-      modal.style.display = "flex"
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.key == "h") {
+    event.preventDefault();
+    if (modal.style.display === "flex") {
+      modal.style.display = "none";
+    } else {
+      modal.style.display = "flex";
     }
   }
-})
+});
 
-fechar.onclick = function(){
-  modal.style.display = "none"
-}
+fechar.onclick = function () {
+  modal.style.display = "none";
+};
 listTarefa(tarefas);
 
 // função para mudar o tema
