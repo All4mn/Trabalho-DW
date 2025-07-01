@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulta de Livros por ISBN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de Livros por ISBN</h1>
+    <form id="isbn-form">
+      <label for="isbn-input">Digite o ISBN:</label>
+      <input type="text" id="isbn-input" name="isbn" placeholder="Ex: 9788535914849" required />
+      <button type="submit">Consultar</button>
+    </form>
+    <div id="error-message" class="error"></div>
+    <div id="book-info" class="book-info"></div>
+  </div>
+  <script src="javascript.js"></script>
+</body>
+</html>
